@@ -14,9 +14,9 @@ cd 4chanDownloader/
 ```
 
 ## Features
-Multi Thread Download (Coming Soon)
-Allow image conversion (Coming Soon)
-Download in multiple formats gif, jpg, png, webm, ect (Coming Soon)
+* Multi Thread Download (**Coming Soon**)
+* Allow image conversion (**Coming Soon**)
+* Download in multiple formats gif, jpg, png, webm, ect (**Coming Soon**)
 
 ## Roadmap
 * parse the html string with regex extracting image filenames

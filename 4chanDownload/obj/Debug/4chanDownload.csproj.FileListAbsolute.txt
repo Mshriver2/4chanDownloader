@@ -71,3 +71,6 @@ C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\obj\Debug
 C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\obj\Debug\4chanDownload.csproj.CopyComplete
 C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\obj\Debug\4chanDownload.dll
 C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\obj\Debug\4chanDownload.pdb
+C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\bin\HtmlAgilityPack.dll
+C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\bin\HtmlAgilityPack.pdb
+C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\bin\HtmlAgilityPack.xml

@@ -26,6 +26,7 @@
 			</td>
 			<td style="height: 67px">
 				<asp:Button ID="btnDownload" runat="server" OnClick="btnDownload_Click" Text="Download Thread" Width="113px" />
+				<asp:Button ID="testBtn" runat="server" EnableTheming="True" OnClick="testBtn_Click" Text="test" />
 			</td>
 		</tr>
 	</table>

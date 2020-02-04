@@ -22,11 +22,20 @@ namespace _4chanDownload
 			string threadNumber = TextBox1.Text;
 			string boardLetter = txtBoardLetter.Text;
 			string html;
+			string radioSelection = "";
+
+			//checks if WebClient should use 4chan or 4channel in the url
+			if (channelRadio.Checked)
+			{
+				radioSelection = "4channel";
+			} else if (chanRadio.Checked){
+				radioSelection = "4chan";
+			}
 
 			//downloads the complete html from the thread
 			using (WebClient client = new WebClient())
 			{
-				html = client.DownloadString("http://boards.4channel.org/" + boardLetter + "/thread/" + threadNumber);
+				html = client.DownloadString("http://boards." + radioSelection + ".org/" + boardLetter + "/thread/" + threadNumber);
 			}
 			HtmlDocument doc = new HtmlDocument();
 			doc.LoadHtml(html);

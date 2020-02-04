@@ -15,8 +15,8 @@
 		</tr>
 		<tr>
 			<td style="height: 67px">
-				<asp:RadioButton ID="chan" runat="server" Text="4chan" />
-				<asp:RadioButton ID="channel" runat="server" Text="4channel" />
+				<asp:RadioButton ID="chanRadio" runat="server" Text="4chan" />
+				<asp:RadioButton ID="channelRadio" runat="server" Text="4channel" />
 			</td>
 			<td style="height: 67px">
 				<asp:TextBox ID="TextBox1" runat="server" Width="190px"></asp:TextBox>

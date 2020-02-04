@@ -42,22 +42,22 @@ namespace _4chanDownload
 		protected global::System.Web.UI.WebControls.Label Label3;
 
 		/// <summary>
-		/// chan control.
+		/// chanRadio control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.RadioButton chan;
+		protected global::System.Web.UI.WebControls.RadioButton chanRadio;
 
 		/// <summary>
-		/// channel control.
+		/// channelRadio control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.RadioButton channel;
+		protected global::System.Web.UI.WebControls.RadioButton channelRadio;
 
 		/// <summary>
 		/// TextBox1 control.

@@ -35,7 +35,7 @@ namespace _4chanDownload
 			//downloads the complete html from the thread
 			using (WebClient client = new WebClient())
 			{
-				html = client.DownloadString("http://boards." + radioSelection + ".org/" + boardLetter + "/thread/" + threadNumber);
+				html = client.DownloadString("https://boards." + radioSelection + ".org/" + boardLetter + "/thread/" + threadNumber);
 			}
 			HtmlDocument doc = new HtmlDocument();
 			doc.LoadHtml(html);
@@ -48,6 +48,12 @@ namespace _4chanDownload
 			{
 				imageUrls.Add(img.GetAttributeValue("src", null));
 			}
+
+			//cleans up the image urls' removes 's' from the end of url
+			//for (int l = 2; l < imageUrls.Count; l++)
+			//{
+			//imageUrls[l] = imageUrls[l].Substring(fileName.Length - 3);
+			//}
 
 			//runs once for every image in the imageUrls list
 			for (int o = 0; o < imageUrls.Count; o++)
@@ -63,12 +69,16 @@ namespace _4chanDownload
 		//Method to download the image files
 		string ImageDownload(string fileName, string k)
 		{
-			
+			//generates the correct file ending, extracted from end of fileName
+			string result = fileName.Substring(fileName.Length - 3);
+
 			using (WebClient client = new WebClient())
 			{
-				client.DownloadFile(new Uri("https:" + fileName), @"C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\temp\" + k + ".jpg");
+				client.DownloadFile(new Uri("https:" + fileName), @"C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\temp\" + k + "." + result);
 			}
 			return "complete";
 		}
+
+		
 	}
 }

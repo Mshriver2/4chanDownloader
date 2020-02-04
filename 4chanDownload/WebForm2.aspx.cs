@@ -21,46 +21,45 @@ namespace _4chanDownload
 		{
 			string threadNumber = TextBox1.Text;
 			string boardLetter = txtBoardLetter.Text;
-
-			//downloads the full threads html
-			WebClient client = new WebClient();
-			string downloadString = client.DownloadString("http://boards.4channel.org/" + boardLetter + "/thread/" + threadNumber);
-
-			//used to capture image urls from html
-			string regexValue = ("<img[^>]*?src\\s*=\\s*[\"\"']?([^'\"\" >]+?)[ '\"\"][^>]*?>");
-
-			//matchs based on regexValue
-			MatchCollection matches = Regex.Matches(downloadString, @regexValue);
-
-			txtBoardLetter.Text = Convert.ToString(matches.Count);
-			var totalMatchs = "";
-			//runs as many times as the number of image url's
-			for (var i=1;i>matches.Count;i++)
-			{
-				totalMatchs = totalMatchs + Convert.ToString(matches[i]);
-			}
-
-			TextArea1.Value = totalMatchs;
-		}
-
-		protected void testBtn_Click(object sender, EventArgs e)
-		{
-			string threadNumber = TextBox1.Text;
-			string boardLetter = txtBoardLetter.Text;
 			string html;
+
+			//downloads the complete html from the thread
 			using (WebClient client = new WebClient())
 			{
 				html = client.DownloadString("http://boards.4channel.org/" + boardLetter + "/thread/" + threadNumber);
 			}
 			HtmlDocument doc = new HtmlDocument();
 			doc.LoadHtml(html);
-			
+
+			//generates list to store imageurls
 			List<string> imageUrls = new List<string>();
+
+			//adds all images from html into the imageUrls list
 			foreach (HtmlNode img in doc.DocumentNode.SelectNodes("//img"))
 			{
 				imageUrls.Add(img.GetAttributeValue("src", null));
 			}
+
+			//runs once for every image in the imageUrls list
+			for (int o = 0; o < imageUrls.Count; o++)
+			{
+				//debugLabel.Text = Server.MapPath(".");
+				ImageDownload(imageUrls[o], Convert.ToString(o));
+			}
+
 			TextArea1.Value = string.Join(" ", imageUrls);
+		}
+
+
+		//Method to download the image files
+		string ImageDownload(string fileName, string k)
+		{
+			
+			using (WebClient client = new WebClient())
+			{
+				client.DownloadFile(new Uri("https:" + fileName), @"C:\Users\Max Shriver\Documents\Programming\4chanDownload\4chanDownload\temp\" + k + ".jpg");
+			}
+			return "complete";
 		}
 	}
 }

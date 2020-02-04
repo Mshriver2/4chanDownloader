@@ -20,13 +20,13 @@
 			</td>
 			<td style="height: 67px">
 				<asp:TextBox ID="TextBox1" runat="server" Width="190px"></asp:TextBox>
-				<textarea id="TextArea1" name="S1" rows="2" style="width: 508px" runat="server"></textarea></td>
+				<textarea id="TextArea1" name="S1" rows="2" style="width: 508px" runat="server"></textarea><asp:Label ID="debugLabel" runat="server" Text="debug"></asp:Label>
+			</td>
 			<td style="height: 67px">
 				<asp:TextBox ID="txtBoardLetter" runat="server"></asp:TextBox>
 			</td>
 			<td style="height: 67px">
 				<asp:Button ID="btnDownload" runat="server" OnClick="btnDownload_Click" Text="Download Thread" Width="113px" />
-				<asp:Button ID="testBtn" runat="server" EnableTheming="True" OnClick="testBtn_Click" Text="test" />
 			</td>
 		</tr>
 	</table>

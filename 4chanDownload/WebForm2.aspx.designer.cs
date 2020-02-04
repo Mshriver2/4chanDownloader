@@ -78,6 +78,15 @@ namespace _4chanDownload
 		protected global::System.Web.UI.HtmlControls.HtmlTextArea TextArea1;
 
 		/// <summary>
+		/// debugLabel control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label debugLabel;
+
+		/// <summary>
 		/// txtBoardLetter control.
 		/// </summary>
 		/// <remarks>
@@ -94,14 +103,5 @@ namespace _4chanDownload
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Button btnDownload;
-
-		/// <summary>
-		/// testBtn control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button testBtn;
 	}
 }

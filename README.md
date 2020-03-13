@@ -20,8 +20,8 @@ cd 4chanDownloader/
 
 ## Roadmap
 * ~~parse the html string with the Html Agility Pack library extracting image filenames~~
-* ~~store the image file names into an array~~
-* ~~download the files to server using array and for loop~~
+* store the image file names into an array
+* download the files to server using array and for loop
 * remove the 's' from the end of image url's in array
 * zip images using thread name
 * provide download button for user to retrieve images
